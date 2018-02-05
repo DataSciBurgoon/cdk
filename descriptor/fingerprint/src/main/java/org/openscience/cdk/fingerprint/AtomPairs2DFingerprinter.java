@@ -1,6 +1,7 @@
 /*
  * Note: this code was ported from Yap Chun Wei's PaDEL source code, which can be found here:
  * http://www.yapcwsoft.com/dd/padeldescriptor/
+ * 
  */
 
 
@@ -17,8 +18,19 @@ import org.openscience.cdk.graph.matrix.TopologicalMatrix;
 import org.openscience.cdk.interfaces.IAtomContainer;
 import org.openscience.cdk.tools.manipulator.AtomContainerManipulator;
 
-
-
+/**
+ * Generates an atom pair 2D fingerprint as implemented in PaDEL given an  {@link IAtomContainer}, that
+ * extends the {@link Fingerprinter}.
+ *
+ * @author         Lyle Burgoon
+ * @cdk.created    2018-02-05
+ * @cdk.keyword    fingerprint
+ * @cdk.keyword    similarity
+ * @cdk.module     fingerprint
+ * @cdk.githash
+ *
+ * @see            org.openscience.cdk.fingerprint.Fingerprinter
+ */
 public class AtomPairs2DFingerprinter extends AbstractFingerprinter implements IFingerprinter {
 	
 	private static final int maxDistance = 10;
